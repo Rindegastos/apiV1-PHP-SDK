@@ -3,7 +3,7 @@ Rindegastos PHP SDK API documentation
 
 # SDK PHP
 
-El SDK PHP de Rindegastos te permite rápidamente integrar tus servicios con Rindegastos. Cnn el SDK podrás autenticarte y consumir los métodos de la API segun tus necesidades sin tener que desarrollar desde cero todo.
+El SDK PHP de Rindegastos te permite rápidamente integrar tus servicios con Rindegastos. Con el SDK podrás autenticarte y consumir los métodos de la API segun tus necesidades sin tener que desarrollar desde cero todo.
 
 Instrucciones
 Lo primero que debes hacer para usar el SDK es descargarlo aquí. Una vez descargado lo único que tienes que hacer es incluir la clase RindeGastos.php en tu proyecto y hacer uso de sus funciones.
