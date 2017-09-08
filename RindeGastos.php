@@ -28,11 +28,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getExpenses?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getExpenses?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -49,7 +50,7 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //Single expense
     function getExpense($params) {
 
@@ -59,11 +60,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getExpense?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getExpense?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -80,10 +82,10 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //list of reports
     function getExpenseReports($params) {
-        
+
         /* INSTRUCTIONS 
          * ResultsPerPage: Integer (mandatory)
          * Page: Integer (mandatory)
@@ -100,11 +102,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getExpenseReports?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getExpenseReports?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -121,21 +124,22 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //single Report
     function getExpenseReport($params) {
-        
+
         /* INSTRUCTIONS 
          * Id: Integer (mandatory)
           END INSTRUCTIONS */
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getExpenseReport?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getExpenseReport?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -152,7 +156,7 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //list of funds
     function getFunds($params) {
 
@@ -165,11 +169,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getFunds?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getFunds?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -186,7 +191,7 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //Single Fund
     function getFund($params) {
 
@@ -196,11 +201,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getFund?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getFund?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -217,7 +223,7 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //list of policies
     function getExpensePolicies($params) {
 
@@ -230,11 +236,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getExpensePolicies?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getExpensePolicies?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -251,7 +258,7 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //Single Policy
     function getExpensePolicy($params) {
 
@@ -261,10 +268,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getExpensePolicy?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getExpensePolicy?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
@@ -282,7 +291,7 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //list of users
     function getUsers($params) {
 
@@ -295,11 +304,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getUsers?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getUsers?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -316,7 +326,7 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //Single User
     function getUser($params) {
 
@@ -326,11 +336,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getUser?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getUser?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -347,7 +358,7 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //Single workflow
     function getExpensePolicyWorkflow($params) {
 
@@ -357,11 +368,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getExpensePolicyWorkflow?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getExpensePolicyWorkflow?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -378,7 +390,7 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //Policy categories list
     function getExpensePolicyCategories($params) {
 
@@ -388,11 +400,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getExpensePolicyCategories?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getExpensePolicyCategories?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -409,7 +422,7 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //Policy expense extra field list
     function getExpensePolicyExpenseFields($params) {
 
@@ -419,11 +432,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getExpensePolicyExpenseFields?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getExpensePolicyExpenseFields?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -440,7 +454,7 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //Policy expense extra field list
     function getExpensePolicyExpenseReportFields($params) {
 
@@ -450,11 +464,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getExpensePolicyExpenseReportFields?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getExpensePolicyExpenseReportFields?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -471,7 +486,7 @@ class RindeGastos {
 
         return $result;
     }
-    
+
     //Policy taxes list
     function getExpensePolicyTaxes($params) {
 
@@ -481,11 +496,12 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "http://localhost:9004/v1/getExpensePolicyTaxes?" . http_build_query($params);
+        $url = "https://api.rindegastos.com/v1/getExpensePolicyTaxes?" . http_build_query($params);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -502,7 +518,274 @@ class RindeGastos {
 
         return $result;
     }
-    
+
+    //put expense report integration
+    function setExpenseReportIntegration($params) {
+
+        /* INSTRUCTIONS 
+         * Id: Integer (mandatory)
+         * IntegrationStatus: Integer (mandatory)
+         * IntegrationCode: Integer (mandatory)
+         * IntegrationDate: DateTime (mandatory)
+          END INSTRUCTIONS */
+        $data_json = json_encode($params);
+
+        //cUrl init: call to service
+        $ch = curl_init();
+        $url = "https://api.rindegastos.com/v1/putExpenseReportIntegration";
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        $headers = array();
+        $headers[] = "Authorization: Bearer " . $this->AccToken;
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        //return transaction 
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            //Catch cUrl Error
+            $result = 'Error:' . curl_error($ch);
+        }
+
+        //Close cUrl
+        curl_close($ch);
+
+        return $result;
+    }
+
+    //put expense integration
+    function setExpenseIntegration($params) {
+
+        /* INSTRUCTIONS 
+         * Id: Integer (mandatory)
+         * IntegrationStatus: Integer (mandatory)
+         * IntegrationCode: Integer (mandatory)
+         * IntegrationDate: DateTime (mandatory)
+          END INSTRUCTIONS */
+        $data_json = json_encode($params);
+
+        //cUrl init: call to service
+        $ch = curl_init();
+        $url = "https://api.rindegastos.com/v1/setExpenseIntegration";
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        $headers = array();
+        $headers[] = "Authorization: Bearer " . $this->AccToken;
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        //return transaction 
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            //Catch cUrl Error
+            $result = '- Error:' . curl_error($ch);
+        }
+
+        //Close cUrl
+        curl_close($ch);
+
+        return $result;
+    }
+
+    //create fund
+    function createFund($params) {
+
+        /* INSTRUCTIONS 
+         * IdEmployee: Integer (Mandatory)
+         * IdAdmin: Integer (Mandatory)
+         * FundName: String (100) (Mandatory)
+         * FundCurrency: String (3) ISO (Mandatory)
+         * FundCode: String (100)
+         * FundAmount: Float (Mandatory)
+         * FundComment: String (256)
+         * FundFlexibility: Bool
+         * FundAutoDeposit: Bool
+         * FundAutoBlock: Bool
+         * FundExpiration: Bool
+         * FundExpirationDate: date Y-m-d
+          END INSTRUCTIONS */
+        $data_json = json_encode($params);
+
+        //cUrl init: call to service
+        $ch = curl_init();
+        $url = "https://api.rindegastos.com/v1/createFund";
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        $headers = array();
+        $headers[] = "Authorization: Bearer " . $this->AccToken;
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        //return transaction 
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            //Catch cUrl Error
+            $result = '- Error:' . curl_error($ch);
+        }
+
+        //Close cUrl
+        curl_close($ch);
+
+        return $result;
+    }
+
+    //create fund
+    function updateFund($params) {
+
+        /* INSTRUCTIONS 
+         * Id: Integer (Mandatory)
+         * IdAdmin: Integer (Mandatory)
+         * FundName: String (100) (Mandatory)
+         * FundCode: String (100)
+         * FundComment: String (256)
+         * FundFlexibility: Bool
+         * FundAutoDeposit: Bool
+         * FundAutoBlock: Bool
+         * FundExpiration: Bool
+         * FundExpirationDate: date Y-m-d
+          END INSTRUCTIONS */
+        $data_json = json_encode($params);
+
+        //cUrl init: call to service
+        $ch = curl_init();
+        $url = "https://api.rindegastos.com/v1/updateFund";
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        $headers = array();
+        $headers[] = "Authorization: Bearer " . $this->AccToken;
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        //return transaction 
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            //Catch cUrl Error
+            $result = '- Error:' . curl_error($ch);
+        }
+
+        //Close cUrl
+        curl_close($ch);
+
+        return $result;
+    }
+
+    function depositMoneyToFund($params) {
+
+        /* INSTRUCTIONS 
+         * Id: Integer (Mandatory)
+         * IdAdmin: Integer (Mandatory)
+         * DepositAmount: Float (Mandatory)
+          END INSTRUCTIONS */
+        $data_json = json_encode($params);
+
+        //cUrl init: call to service
+        $ch = curl_init();
+        $url = "https://api.rindegastos.com/v1/depositMoneyToFund";
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        $headers = array();
+        $headers[] = "Authorization: Bearer " . $this->AccToken;
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        //return transaction 
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            //Catch cUrl Error
+            $result = '- Error:' . curl_error($ch);
+        }
+
+        //Close cUrl
+        curl_close($ch);
+
+        return $result;
+    }
+
+    function withdrawMoneyFromFund($params) {
+
+        /* INSTRUCTIONS 
+         * Id: Integer (Mandatory)
+         * IdAdmin: Integer (Mandatory)
+         * WithdrawAmount: Float (Mandatory)
+          END INSTRUCTIONS */
+        $data_json = json_encode($params);
+
+        //cUrl init: call to service
+        $ch = curl_init();
+        $url = "https://api.rindegastos.com/v1/WithdrawMoneyFromFund";
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        $headers = array();
+        $headers[] = "Authorization: Bearer " . $this->AccToken;
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        //return transaction 
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            //Catch cUrl Error
+            $result = '- Error:' . curl_error($ch);
+        }
+
+        //Close cUrl
+        curl_close($ch);
+
+        return $result;
+    }
+
+    function setFundStatus($params) {
+
+        /* INSTRUCTIONS 
+         * Id: Integer (Mandatory)
+         * IdAdmin: Integer (Mandatory)
+         * FundStaus : String () (Mandatory)
+          END INSTRUCTIONS */
+        $data_json = json_encode($params);
+
+        //cUrl init: call to service
+        $ch = curl_init();
+        $url = "https://api.rindegastos.com/v1/setFundStatus";
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        $headers = array();
+        $headers[] = "Authorization: Bearer " . $this->AccToken;
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        //return transaction 
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            //Catch cUrl Error
+            $result = '- Error:' . curl_error($ch);
+        }
+
+        //Close cUrl
+        curl_close($ch);
+
+        return $result;
+    }
+
 }
 
 ?>
