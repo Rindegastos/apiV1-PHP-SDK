@@ -532,7 +532,7 @@ class RindeGastos {
 
         //cUrl init: call to service
         $ch = curl_init();
-        $url = "https://api.rindegastos.com/v1/putExpenseReportIntegration";
+        $url = "https://api.rindegastos.com/v1/setExpenseReportIntegration";
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
@@ -778,6 +778,43 @@ class RindeGastos {
         if (curl_errno($ch)) {
             //Catch cUrl Error
             $result = '- Error:' . curl_error($ch);
+        }
+
+        //Close cUrl
+        curl_close($ch);
+
+        return $result;
+    }
+    
+    //put expense report setExpenseReportCustomStatus
+    function setExpenseReportCustomStatus($params) {
+
+        /* INSTRUCTIONS 
+         * Id: Integer (mandatory)
+         * IdAdmin: Integer (mandatory)
+         * CustomStatus: String (mandatory)
+         * CustomMessage: String 
+          END INSTRUCTIONS */
+        $data_json = json_encode($params);
+
+        //cUrl init: call to service
+        $ch = curl_init();
+        $url = "https://api.rindegastos.com/v1/setExpenseReportCustomStatus";
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        $headers = array();
+        $headers[] = "Authorization: Bearer " . $this->AccToken;
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        //return transaction 
+        $result = curl_exec($ch);
+        if (curl_errno($ch)) {
+            //Catch cUrl Error
+            $result = 'Error:' . curl_error($ch);
         }
 
         //Close cUrl
