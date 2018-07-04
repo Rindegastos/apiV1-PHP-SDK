@@ -541,6 +541,7 @@ class RindeGastos {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
+        $headers[] = "content-type: application/json";
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         //return transaction 
@@ -578,6 +579,7 @@ class RindeGastos {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
+        $headers[] = "content-type: application/json";
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         //return transaction 
@@ -666,6 +668,7 @@ class RindeGastos {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
+        $headers[] = "content-type: application/json";
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         //return transaction 
@@ -771,6 +774,7 @@ class RindeGastos {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
+        $headers[] = "content-type: application/json";
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         //return transaction 
@@ -808,6 +812,7 @@ class RindeGastos {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $headers = array();
         $headers[] = "Authorization: Bearer " . $this->AccToken;
+        $headers[] = "content-type: application/json";
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         //return transaction 
